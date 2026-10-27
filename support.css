@@ -1,0 +1,96 @@
+/* Blue offer, refusal story and overdue guide. */
+.hero-support{position:relative;isolation:isolate;grid-template-columns:1.18fr 1fr;gap:40px;padding-top:40px;padding-bottom:40px;margin-top:12px;margin-bottom:34px;color:#fff}
+.hero-support:before{content:'';position:absolute;inset:0 16px;z-index:-1;border-radius:24px;background:radial-gradient(ellipse at 40% 0%,#315bea 0,transparent 65%),#2143c5}
+.hero-support .hero-copy{padding:13px 0 4px 14px;min-width:0}
+.hero-support .eyebrow{color:#d3ddff;font-size:9px;letter-spacing:1.45px}
+.hero-support h1{font-size:clamp(46px,5vw,64px);line-height:1.12;letter-spacing:-2.5px;margin:26px 0 23px;font-weight:550}
+.hero-support h1 em{display:inline-block;color:#172554;background:#ffffff;border-radius:50px;padding:0 17px 7px;margin:5px 0 5px -3px}
+.hero-support .lead{font-size:15px;line-height:1.65;color:#dce4ff;margin:0 0 25px;max-width:460px}
+.hero-checklist{list-style:none;margin:0 0 29px;padding:0;display:grid;gap:10px;font-size:13px;line-height:1.55;color:#f5f7ff}
+.hero-checklist li{position:relative;padding-left:29px}
+.hero-checklist li:before{content:'✓';position:absolute;left:0;top:1px;border-radius:50%;width:19px;height:19px;display:grid;place-items:center;background:#c8f2cc;color:#172554;font-size:12px;font-weight:700}
+.hero-actions{display:grid;gap:10px;max-width:420px}
+.hero-actions .button{min-height:55px;padding:15px 20px;font-size:13px;gap:12px}
+.hero-actions .button-secondary{background:transparent;border:1px solid #b5c6ff;color:#fff}
+.hero-actions .button-secondary:hover{background:#ffffff10;border-color:#fff}
+.hero-support .micro{color:#dae3ff;font-size:9px;line-height:1.7;margin:17px 0 0;max-width:420px}
+.hero-support .check{color:#c8f2cc}
+.hero-support .broker-hero{border-radius:16px;min-height:620px}
+.hero-support .broker-hero>img{object-position:50% 36%}
+.hero-support .broker-hero figcaption{bottom:30px;left:27px}
+.hero-support .broker-hero figcaption>b{font-size:31px;margin:10px 0 17px}
+.hero-photo-tag{position:absolute;top:20px;right:18px;padding:13px 17px;border:1px solid #ffffff70;border-radius:12px;background:#f5f7fce8;color:#172554;font-size:10px;line-height:1.5;box-shadow:0 8px 24px #2143c510}
+.hero-photo-tag>span{float:right;font-size:23px;margin-left:17px;line-height:1}
+.support-section{padding-top:68px;padding-bottom:0}
+.support-section .section-heading>p{max-width:320px}
+.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.support-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;border:1px solid #dce2ef;border-radius:14px;padding:27px;background:#fff}
+.support-card:nth-child(2){background:#edf2ff}
+.support-card:nth-child(3){background:#e8eeff}
+.support-number{font-size:8px;font-weight:550;letter-spacing:1.2px;color:#65738c}
+.support-icon{width:45px;height:45px;display:grid;place-items:center;font-size:25px;border:1px solid #bcc9b9;border-radius:50%;margin:26px 0 22px}
+.support-card h3{font-size:23px;line-height:1.25;font-weight:500;letter-spacing:-.65px;margin:0 0 15px;max-width:260px}
+.support-card p{font-size:12px;color:#616e89;line-height:1.85;margin:0 0 28px}
+.support-card>a{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;padding-top:16px;margin-top:auto;border-top:1px solid #d3ddef;font-size:11px;font-weight:550}
+.support-card>a span{font-size:21px;line-height:1}
+.support-card>a:hover{color:#bf4b22}
+@media(max-width:1050px){.hero-support{gap:25px;grid-template-columns:1.1fr 1fr}.hero-support .hero-copy{padding-left:8px}.hero-support h1{font-size:53px}.hero-support .eyebrow{font-size:8px;letter-spacing:.8px}.hero-checklist{font-size:12px}.hero-support .broker-hero{min-height:630px}.support-card{padding:23px}.support-card h3{font-size:21px}}
+@media(max-width:760px){.hero-support{grid-template-columns:1fr;gap:28px;padding:32px 36px 20px;margin-top:0;margin-bottom:25px}.hero-support:before{inset:0 14px;border-radius:20px}.hero-support .hero-copy{padding:0}.hero-support h1{font-size:clamp(44px,8.7vw,60px);margin:24px 0 20px;letter-spacing:-1.9px}.hero-support .lead{font-size:14px}.hero-checklist{font-size:13px;gap:12px;margin-bottom:26px}.hero-actions{max-width:none}.hero-actions .button{font-size:12px;min-height:55px;padding:15px 17px}.hero-support .micro{font-size:9px;margin-top:16px}.hero-support .broker-hero{min-height:390px;max-width:none;width:100%;border-radius:12px}.hero-support .broker-hero>img{object-position:50% 32%}.hero-support .broker-hero figcaption{left:23px;bottom:23px}.hero-support .broker-hero figcaption>b{font-size:27px}.hero-photo-tag{font-size:9px;top:15px;right:15px;padding:10px 13px}.support-section{padding-top:48px}.support-grid{grid-template-columns:1fr;gap:12px}.support-card{padding:24px}.support-icon{margin:20px 0 18px}.support-card h3{max-width:none;font-size:24px}.support-card p{max-width:520px;margin-bottom:22px}.support-card>a{font-size:12px}}
+@media(max-width:360px){.hero-support{padding-left:30px;padding-right:30px}.hero-support h1{font-size:39px}.hero-support .eyebrow{font-size:7px}.hero-actions .button{font-size:11px}.hero-checklist{font-size:12px}.hero-support .broker-hero{min-height:350px}}
+.brand-wordmark>span{color:#284ddd}
+.brand-rise{color:#284ddd}
+.hero-support:before{background:radial-gradient(ellipse at 0 0,#345df3 0,transparent 58%),radial-gradient(ellipse at 100% 100%,#3454e8 0,transparent 48%),#203caf}
+.hero-support h1 em{color:#2544c5}
+.hero-support h1{font-size:clamp(44px,4.7vw,60px)}
+.hero-support .broker-hero{background:#dfe7fb}
+.hero-support .broker-hero:after{background:linear-gradient(transparent,#132668eb)}
+.button{background:linear-gradient(110deg,#f47809,#f6c400);color:#172554;font-weight:650}
+.button:hover{background:linear-gradient(110deg,#f99428,#ffda36)}
+.hero-actions .button-secondary{background:#fff;color:#22335b;border-color:#fff;font-weight:500}
+.hero-actions .button-secondary:hover{background:#edf2ff;border-color:#edf2ff}
+.hero-support .eyebrow i{background:#ffc72e}
+.contact-strip{background:linear-gradient(120deg,#223fb7,#2b50d8)}
+.text-link:hover,.header nav a:hover{color:#284ddd}
+.messenger-link:hover{border-color:#284ddd;color:#284ddd}
+.person-icon{color:#284ddd}
+.review-placeholder{border-color:#cdd8f0}
+.quote-mark{color:#6c87dc}
+.review-placeholder p,.review-card blockquote{color:#616e89}
+.application-form #form-status{color:#172554;background:#edf2ff}
+.contact-method label:has(:checked){background:#edf2ff;border-color:#284ddd}
+.refusal-section{padding-top:76px;padding-bottom:0}
+.refusal-heading{margin-bottom:29px}
+.refusal-heading h2{font-size:clamp(31px,3.2vw,42px);line-height:1.25}
+.refusal-heading h2 em{color:#284ddd}
+.refusal-card{display:grid;grid-template-columns:90px minmax(0,1fr);gap:30px;background:#fff;border:1px solid #dce2ef;border-radius:22px;padding:38px 42px;box-shadow:0 12px 40px #2345ba04}
+.refusal-symbol{width:72px;height:72px;background:#edf2ff;color:#2b50d8;display:grid;place-items:center;border-radius:50%;font-size:38px}
+.refusal-card p{font-size:15px;line-height:1.9;color:#616e89;margin:0 0 16px;max-width:900px}
+.refusal-card p.refusal-lead{color:#172554;font-size:23px;line-height:1.5;font-weight:500;letter-spacing:-.4px;margin-bottom:17px}
+.refusal-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid #e2e8f5;padding-top:21px;margin-top:25px}
+.refusal-bottom>span{font-size:11px;color:#6b7895}
+.refusal-bottom .text-link{color:#284ddd}
+.overdue-section{padding-top:70px;padding-bottom:76px}
+.overdue-section .section-heading{align-items:center}
+.overdue-section h2{font-size:clamp(30px,3vw,38px);line-height:1.28}
+.mobile-break{display:none}
+.overdue-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.overdue-card{position:relative;min-width:0;background:#fff;border:1px solid #dce2ef;border-left:5px solid var(--card-accent);border-radius:18px;padding:29px 32px 30px}
+.overdue-technical{--card-accent:#29b86a}
+.overdue-short{--card-accent:#eaa918}
+.overdue-medium{--card-accent:#ef8d28}
+.overdue-long{--card-accent:#5974df}
+.overdue-index{position:absolute;top:24px;right:26px;font-size:12px;color:#a5b1ca}
+.overdue-card h3{font-size:23px;font-weight:600;line-height:1.4;letter-spacing:-.5px;margin:0 28px 1px 0;color:#26314c}
+.overdue-duration{display:block;font-size:12px;color:#7a8296;margin-bottom:17px}
+.overdue-card p{font-size:14px;line-height:1.85;margin:0;color:#53617c}
+.overdue-note{display:flex;gap:12px;align-items:start;margin-top:24px;color:#6b7895}
+.overdue-note>span{flex-shrink:0;display:grid;place-items:center;width:22px;height:22px;border:1px solid #b4c2e5;border-radius:50%;font-size:13px}
+.overdue-note p{font-size:10px;line-height:1.8;max-width:930px;margin:1px 0 0}
+.overdue-note a{color:#284ddd;text-decoration:underline;text-underline-offset:3px}
+.process-section .section{padding-top:65px;padding-bottom:65px}
+.process-section .steps article{background:#fff;border:1px solid #dce2ef;border-radius:14px;padding:24px 22px}
+.steps article>span{color:#3153ce}
+.steps p{color:#616e89}
+@media(max-width:1050px){.refusal-card{padding:30px;grid-template-columns:65px minmax(0,1fr);gap:24px}.refusal-symbol{width:60px;height:60px}.overdue-card{padding:25px}.overdue-card h3{font-size:21px}.steps{gap:15px}.process-section .steps article{padding:20px 16px}}
+@media(max-width:760px){.hero-support h1{font-size:clamp(39px,8.7vw,60px)}.refusal-section{padding-top:48px}.refusal-heading{margin-bottom:23px}.refusal-heading h2{font-size:30px}.refusal-card{display:block;padding:26px 24px;border-radius:20px}.refusal-symbol{display:none}.refusal-card p.refusal-lead{font-size:20px;line-height:1.5}.refusal-card p{font-size:14px;line-height:1.85}.refusal-bottom{gap:15px;margin-top:22px;padding-top:18px}.refusal-bottom>span{font-size:10px}.overdue-section{padding-top:48px;padding-bottom:48px}.overdue-section h2{font-size:29px;letter-spacing:-.8px}.overdue-section .section-heading>p{font-size:12px}.overdue-grid{grid-template-columns:1fr;gap:16px}.overdue-card{padding:25px 23px 27px;border-radius:17px}.overdue-card h3{font-size:22px}.overdue-duration{font-size:13px;margin-bottom:14px}.overdue-card p{font-size:14px;line-height:1.85}.overdue-index{right:21px;top:27px}.overdue-note p{font-size:10px}.process-section .section{padding-top:48px;padding-bottom:48px}.process-section .steps{grid-template-columns:1fr 1fr;gap:12px}.process-section .steps article{padding:20px 16px}}
+@media(max-width:360px){.hero-support h1{font-size:35px}.overdue-section h2,.refusal-heading h2{font-size:27px}.process-section .steps{grid-template-columns:1fr}}
