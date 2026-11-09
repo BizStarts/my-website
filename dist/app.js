@@ -16,7 +16,7 @@ document.querySelector('.dialog-close').addEventListener('click', () => privacy.
 privacy.addEventListener('click', event => { if (event.target === privacy) { const rect = privacy.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) privacy.close(); } });
 const config = window.SITE_CONFIG || {};
 const contactHosts = { telegram: ['t.me', 'telegram.me'], vk: ['vk.me'] };
-const contactUrls = { telegram: config.telegramUrl || 'https://t.me/sofiya_krupe', vk: 'https://vk.me/club243105077' };
+const contactUrls = { telegram: config.telegramUrl || 'https://t.me/sofiya_krupe', vk: config.vkUrl };
 document.querySelectorAll('[data-contact]').forEach(link => {
   const service = link.dataset.contact;
   try {
