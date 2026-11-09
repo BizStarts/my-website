@@ -15,12 +15,14 @@ document.querySelectorAll('#privacy-open, #privacy-footer').forEach(button => bu
 document.querySelector('.dialog-close').addEventListener('click', () => privacy.close());
 privacy.addEventListener('click', event => { if (event.target === privacy) { const rect = privacy.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) privacy.close(); } });
 const config = window.SITE_CONFIG || {};
-const contactHosts = { telegram: ['t.me', 'telegram.me'], max: ['max.ru', 'www.max.ru'] };
+const contactHosts = { telegram: ['t.me', 'telegram.me'], vk: ['vk.me'] };
+const contactUrls = { telegram: config.telegramUrl || 'https://t.me/sofiya_krupe', vk: 'https://vk.me/club243105077' };
 document.querySelectorAll('[data-contact]').forEach(link => {
   const service = link.dataset.contact;
   try {
-    const url = new URL(config[service === 'telegram' ? 'telegramUrl' : 'maxUrl']);
-    if (url.protocol !== 'https:' || !contactHosts[service].includes(url.hostname) || url.pathname === '/') throw new Error('Invalid contact');
+    const url = new URL(contactUrls[service]);
+    if (url.protocol !== 'https:' || !contactHosts[service]?.includes(url.hostname) || url.pathname === '/') throw new Error('Invalid contact');
+    if (service === 'telegram') url.searchParams.set('text', 'Кредит');
     link.href = url.href;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
@@ -68,9 +70,7 @@ form.addEventListener('submit', async event => {
   const status = document.querySelector('#form-status');
   status.hidden = false;
   if (!endpoint && googleForm) {
-    // A normal browser POST displays Google's real confirmation or validation error.
-    // This form currently has only two text fields, so keep the preferred channel
-    // alongside the phone rather than silently discarding it.
+    // Preserve the preferred channel alongside the phone in the two-field Google Form.
     const method = form.querySelector('[name=contactMethod]:checked').value;
     const googleSubmission = document.createElement('form');
     googleSubmission.method = 'POST';
