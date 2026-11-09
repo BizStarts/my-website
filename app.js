@@ -15,12 +15,12 @@ document.querySelectorAll('#privacy-open, #privacy-footer').forEach(button => bu
 document.querySelector('.dialog-close').addEventListener('click', () => privacy.close());
 privacy.addEventListener('click', event => { if (event.target === privacy) { const rect = privacy.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) privacy.close(); } });
 const config = window.SITE_CONFIG || {};
-const contactHosts = { telegram: ['t.me', 'telegram.me'], max: ['max.ru', 'www.max.ru'] };
+const contactHosts = { telegram: ['t.me', 'telegram.me'], vk: ['vk.me'] };
 document.querySelectorAll('[data-contact]').forEach(link => {
   const service = link.dataset.contact;
   try {
-    const url = new URL(config[service === 'telegram' ? 'telegramUrl' : 'maxUrl']);
-    if (url.protocol !== 'https:' || !contactHosts[service].includes(url.hostname) || url.pathname === '/') throw new Error('Invalid contact');
+    const url = new URL(config[service === 'telegram' ? 'telegramUrl' : 'vkUrl']);
+    if (url.protocol !== 'https:' || !contactHosts[service]?.includes(url.hostname) || url.pathname === '/') throw new Error('Invalid contact');
     link.href = url.href;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';

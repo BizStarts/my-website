@@ -17,7 +17,7 @@ function setupGoogleForm() {
   };
   const name = textItem(['имя', 'ваше имя', 'как к вам обращаться'], 'Имя');
   const phone = textItem(['телефон', 'ваш телефон', 'номер телефона'], 'Телефон');
-  const choices = ['Telegram', 'Макс', 'WhatsApp'];
+  const choices = ['Telegram', 'ВКонтакте', 'WhatsApp'];
   const methodItem = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).find(item =>
     item.getTitle().trim().toLowerCase() === 'удобный способ связи' &&
     choices.every(value => item.asMultipleChoiceItem().getChoices().some(choice => choice.getValue() === value)));
@@ -36,7 +36,7 @@ function doPost(event) {
     const phone = String(data.phone || '').trim();
     const digits = phone.replace(/\D/g, '');
     if (!name || name.length > 80 || !/^[+0-9 ()-]{10,22}$/.test(phone) || digits.length < 10 || digits.length > 15 ||
-        !['Telegram', 'Макс', 'WhatsApp'].includes(data.contactMethod) || data.consent !== 'yes') {
+        !['Telegram', 'ВКонтакте', 'WhatsApp'].includes(data.contactMethod) || data.consent !== 'yes') {
       return jsonResponse({ ok: false });
     }
     const props = PropertiesService.getScriptProperties();

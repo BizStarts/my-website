@@ -45,7 +45,7 @@ async function check(method, invalidPhone = false) {
 }
 
 (async () => {
-  for (const method of ['Telegram', 'Макс', 'WhatsApp']) await check(method);
+  for (const method of ['Telegram', 'ВКонтакте', 'WhatsApp']) await check(method);
   await check('Telegram', true);
   console.log('PASS: direct Google POST sends name, phone and each preferred messenger; invalid phone prevents submission.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

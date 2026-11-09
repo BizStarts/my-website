@@ -20,7 +20,7 @@ const context = vm.createContext({
   ContentService: { MimeType: { JSON: 'json' }, createTextOutput: text => ({ setMimeType: () => JSON.parse(text) }) }
 });
 vm.runInContext(readFileSync(root + 'google-form.gs', 'utf8'), context);
-for (const method of ['Telegram', 'Макс', 'WhatsApp']) {
+for (const method of ['Telegram', 'ВКонтакте', 'WhatsApp']) {
   const result = context.doPost({ parameter: { name: 'Анна', phone: '+7 (999) 123-45-67', contactMethod: method, consent: 'yes' } });
   assert.equal(result.ok, true);
   assert.equal(result.responseId, 'record-1');
